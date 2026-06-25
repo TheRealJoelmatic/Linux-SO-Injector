@@ -30,8 +30,8 @@ mkdir cmake-build-debug
 cd cmake-build-debug
 cmake ..
 ninja
-./SO_Injector
 sudo setcap cap_sys_ptrace,cap_dac_read_search=ep ./SO_Injector
+./SO_Injector
 ```
 
 ## Release binary
