@@ -2,6 +2,9 @@
 
 Lightweight Linux .so injector with an ImGui frontend. Attach to a running process, call `dlopen()` inside it and optionally start an `entry` thread inside the loaded library.
 
+![Inject](https://github.com/TheRealJoelmatic/Linux-SO-Injector/blob/main/imgs/inject.png?raw=true)
+![HomeScreen](https://github.com/TheRealJoelmatic/Linux-SO-Injector/blob/main/imgs/advanced.png?raw=true)
+
 Table of Contents
 -----------------
 - [Quick start](#quick-start)
