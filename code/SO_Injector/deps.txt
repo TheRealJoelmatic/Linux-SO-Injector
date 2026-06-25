@@ -1,0 +1,14 @@
+
+## Setup
+Give the process perms
+
+sudo setcap cap_sys_ptrace,cap_dac_read_search=eip ./SO_Injector
+
+## deps
+glw
+
+
+## Creds
+https://github.com/gaffe23/linux-inject
+https://github.com/ParkHanbum/linux_so_injector
+https://github.com/ilammy/linux-crt
