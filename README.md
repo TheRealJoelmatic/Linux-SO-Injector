@@ -30,7 +30,7 @@ mkdir cmake-build-debug
 cd cmake-build-debug
 cmake ..
 ninja
-sudo setcap cap_sys_ptrace,cap_dac_read_search=ep ./SO_Injector
+sudo setcap cap_sys_ptrace,cap_dac_read_search=eip ./SO_Injector
 ./SO_Injector
 ```
 
@@ -39,7 +39,7 @@ If you download the prebuilt release binary from GitHub. The Injector must have 
 
 This can be done so like this
 ```bash
-sudo setcap cap_sys_ptrace,cap_dac_read_search=ep ./SO_Injector
+sudo setcap cap_sys_ptrace,cap_dac_read_search=eip ./SO_Injector
 ```
 
 ## Requirements & deps
