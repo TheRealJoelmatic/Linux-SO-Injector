@@ -1,18 +1,5 @@
 //
-// inject.cpp — remote .so loader via ptrace syscall trampolining
-//
-// Technique:
-//   1. Attach to target; advance past one complete syscall so we are not
-//      mid-lock inside any glibc critical section.
-//   2. Back up k_backupSize bytes from the first executable page.
-//   3. Write a 3-byte 'syscall; int3' trampoline there and use it to
-//      mmap a small RW page — used only to hold the .so path string.
-//   4. Replace the trampoline with the dlopen shellcode (still in the exec
-//      region so glibc's caller-link-map lookup doesn't crash).
-//   5. Resume: shellcode saves rsp, subtracts a 128 KB margin (so dlopen
-//      has plenty of stack), calls dlopen, restores rsp, hits int3.
-//   6. Write the trampoline back and use it for munmap.
-//   7. Restore original bytes + registers, detach.
+// inject.cpp
 //
 
 #include "inject.h"
